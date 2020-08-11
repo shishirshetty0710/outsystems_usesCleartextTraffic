@@ -17,10 +17,6 @@
         </config-file>
 
         <hook type="before_plugin_install" src="hooks/outsystems/handle_cleartextTrafficPermitted.js" />
-        
-        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application android:usesCleartextTraffic="true" />
-        </edit-config>
 
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
     </platform>
