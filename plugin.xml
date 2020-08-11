@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.outsystems.usesCleartextTraffic" version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <name>UsesCleartextTraffic</name>
+    
+    <js-module name="UsesCleartextTraffic" src="www/UsesCleartextTraffic.js">
+        <clobbers target="cordova.plugins.UsesCleartextTraffic" />
+    </js-module>
+    
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="UsesCleartextTraffic">
+                <param name="android-package" value="com.outsystems.usesCleartextTraffic.UsesCleartextTraffic" />
+            </feature>
+        </config-file>
+
+        <hook type="before_plugin_install" src="hooks/outsystems/handle_cleartextTrafficPermitted.js" />
+        
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+    </platform>
+
+</plugin>

@@ -1,0 +1,17 @@
+{
+  "name": "com.outsystems.usesCleartextTraffic",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "com.outsystems.usesCleartextTraffic",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Izam Basiron",
+  "license": "ISC"
+}
