@@ -17,7 +17,7 @@ module.exports = function(context) {
                 }
 
                 if (data.indexOf(ANDROID_PREFERENCE_NAME) == -1) {
-                    var result = data.replace(/<base-config/g, '<base-config ' + ANDROID_PREFERENCE_NAME + '="true"');
+                    var result = data.replace(/<base-config/g, '<base-config ' + ANDROID_PREFERENCE_NAME + '="false"');
 
                     fs.writeFile(config, result, 'utf8', function (err) {
                         if (err) {
