@@ -15,7 +15,11 @@
                 <param name="android-package" value="com.outsystems.usesCleartextTraffic.UsesCleartextTraffic" />
             </feature>
         </config-file>
-        
+        <edit-config file="AndroidManifest.xml"
+                 target="/manifest"
+                 mode="merge">
+        <manifest xmlns:tools="http://schemas.android.com/tools"/>
+    </edit-config>
         <edit-config file="AndroidManifest.xml"
                  target="/manifest/application"
                  mode="merge">
