@@ -15,12 +15,6 @@
                 <param name="android-package" value="com.outsystems.usesCleartextTraffic.UsesCleartextTraffic" />
             </feature>
         </config-file>
-        
-        <edit-config file="AndroidManifest.xml"
-                 target="/manifest"
-                 mode="merge">
-        <manifest xmlns:tools="http://schemas.android.com/tools" tools:replace="allowBackup" android:allowBackup="false"/>
-        </edit-config>
 
         <hook type="before_plugin_install" src="hooks/outsystems/handle_cleartextTrafficPermitted.js" />
 
